@@ -1,0 +1,38 @@
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+dist/
+build/
+.vite/
+coverage/
+.pytest_cache/
+.mypy_cache/
+*.log
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.bak
+*.backup
+*.before-*
+*_backup.*
+*_before_*
+
+# Old/duplicate project copies
+FarmRakshak_Replit_CLEAN/
+backend_deploy/
+replit_deploy/
+replit_project/
+
+# Archives / temporary files
+*.zip
+plant_test.png
+
+*.cell*-backup
+
+tsconfig.tsbuildinfo

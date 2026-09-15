@@ -1,0 +1,77 @@
+{
+  "model_name": "Indian Agricultural Crop Yield Random Forest Regressor",
+  "model_type": "RandomForestRegressor",
+  "version": "1.0.0",
+  "library": "scikit-learn",
+  "sklearn_version": "1.9.0",
+  "features": {
+    "categorical": [
+      "crop",
+      "season",
+      "state"
+    ],
+    "numeric": [
+      "year",
+      "area",
+      "production",
+      "fertilizer",
+      "pesticide"
+    ],
+    "all": [
+      "crop",
+      "season",
+      "state",
+      "year",
+      "area",
+      "production",
+      "fertilizer",
+      "pesticide"
+    ]
+  },
+  "target": {
+    "name": "yield",
+    "unit": "tonnes/hectare"
+  },
+  "crops_covered": [
+    "Chickpea",
+    "Cotton",
+    "Groundnut",
+    "Maize",
+    "Onion",
+    "Potato",
+    "Rice",
+    "Soybean",
+    "Sugarcane",
+    "Tomato",
+    "Wheat"
+  ],
+  "states_covered": [
+    "Andhra Pradesh",
+    "Bihar",
+    "Gujarat",
+    "Haryana",
+    "Karnataka",
+    "Madhya Pradesh",
+    "Maharashtra",
+    "Punjab",
+    "Rajasthan",
+    "Tamil Nadu",
+    "Telangana",
+    "Uttar Pradesh"
+  ],
+  "seasons_covered": [
+    "Kharif",
+    "Rabi",
+    "Summer",
+    "Whole Year"
+  ],
+  "dataset_size": 11232,
+  "evaluation_metrics": {
+    "r2_score": 0.9909,
+    "rmse": 2.0512,
+    "mae": 1.0461,
+    "test_sample_size": 2247
+  },
+  "training_date": "2026-08-19",
+  "source": "Ministry of Agriculture & Farmers Welfare, ICAR & ICRISAT benchmark statistics"
+}
