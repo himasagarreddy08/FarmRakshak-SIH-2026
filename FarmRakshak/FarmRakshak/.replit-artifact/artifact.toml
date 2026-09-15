@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "FarmRakshak"
+description = "A mobile-first AI-powered agricultural decision support app that helps farmers map fields, understand crop risk, scan for disease, and act on explainable recommendations using a live digital twin."
+version = "1.0.0"
+id = "artifacts/farmrakshak"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20196
+
+[services.development]
+run = "pnpm --filter @workspace/farmrakshak run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/farmrakshak", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/farmrakshak/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20196"
+BASE_PATH = "/"
